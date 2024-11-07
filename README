@@ -1,1 +1,1 @@
-This thingy creates a dead area at the bottom of your graphics tablet if it's too tall for the PC screen (in my case, it's 16:9 on PC vs 4:3 on the tablet; beware that the algorithm presented in this repository does not account for tablets that are too wide)
+This program shrinks the active area of your graphics tablet to make its aspect ratio match your screen. Useful to have your drawings not be stretched on one axis

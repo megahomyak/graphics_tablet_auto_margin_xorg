@@ -13,6 +13,9 @@ screen_ratio = screen_width / screen_height
 
 tablet_ratio = eval(input('Enter the tablet screen ratio ("x/y"): '))
 
-y_factor = screen_ratio/tablet_ratio
+ratio_modifier = screen_ratio/tablet_ratio
 
-run(["xinput", "set-prop", tablet_id, "Coordinate Transformation Matrix", "1", "0", "0", "0", str(y_factor), "0", "0", "0", "1"])
+if ratio_modifier > 1:
+    run(["xinput", "set-prop", tablet_id, "Coordinate Transformation Matrix", "1", "0", "0", "0", str(ratio_modifier), "0", "0", "0", "1"])
+else:
+    run(["xinput", "set-prop", tablet_id, "Coordinate Transformation Matrix", str(ratio_modifier), "0", "0", "0", "1", "0", "0", "0", "1"])
