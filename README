@@ -1,0 +1,5 @@
+Wanted to make this "auto", but fuck that. Too lazy. I love myself too much not to do this
+
+$ xinput set-prop ${TABLET_ID} "Coordinate Transformation Matrix" 1 0 0 0 1.333 -0.125 0 0 1
+
+^^^ That's a transformation matrix for a 16:9 computer screen with a 4:3 graphics tablet screen. "1.333" is a Y stretch factor, and "-0.125" is a Y offset. Both the factor and the offset are calculated from the computer screen's perspective, so it makes the input window on the tablet narrower and offsets it, creating two dead zones on the screen of the tablet (at the top and at the bottom, making the usable zone of the tablet be 16:9)
