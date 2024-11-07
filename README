@@ -1,1 +1,3 @@
 This program shrinks the active area of your graphics tablet to make its aspect ratio match your screen. Useful to have your drawings not be stretched on one axis
+
+If you want to make this permanent: create an xorg.conf.d entry of "InputClass" with the option "TransformationMatrix" set to the numbers in "Coordinate Transformation Matrix", but without quotes. You might need to experiment with "MatchProduct" and make it broader in order for this to work. An example of such a config is located in `90-tablet.example.conf` in this repository.

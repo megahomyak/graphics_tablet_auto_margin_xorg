@@ -2,6 +2,7 @@ import subprocess
 import re
 
 def run(command):
+    print(f"Running: {command}")
     return subprocess.run(command, capture_output=True).stdout.decode("utf-8")
 
 print(run(["xinput", "list"]))
